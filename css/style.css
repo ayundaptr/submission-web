@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navigasi {
+  background-color: #a87676;
+  width: 100%;
+  height: 10px;
+  color: aliceblue;
+  position: fixed;
+}
+
+.logo {
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.menu {
+  margin-left: 500px;
+  padding-top: 25px;
+}
+
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.menu ul li a:hover {
+  color: #ffd0d0;
+  font-style: italic;
+}
+
+.banner {
+  background-color: #a87676;
+  height: 700px;
+  text-align: center;
+  color: white;
+}
+
+.banner img {
+  border-radius: 100px;
+  height: 150px;
+  border: 6px solid white;
+  margin-top: 100px;
+}
+
+.banner h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.banner button {
+  margin-top: 60px;
+  padding: 10px;
+  width: 400px;
+  border-radius: 50px;
+  border: none;
+}
+
+.banner button:hover {
+  background-color: #a87676;
+  border: 1px solid white;
+  color: white;
+}
+
+h1 span:before {
+  content: "";
+  animation: gerak infinite 8s ease;
+  transform: translateY(-50%);
+  color: lightcoral;
+  font-family: 70px;
+}
+
+@keyframes gerak {
+  0% {
+    content: "Selamat Datang";
+  }
+  50% {
+    content: "Saya Ayunda Putri";
+  }
+  100% {
+    content: "Terima Kasih Sudah Singgah!";
+  }
+}
+
+.tentang,
+.pendidikan,
+.kegiatan,
+.kontak {
+  padding: 0 10rem;
+}
+
+.tentang .row,
+.pendidikan .row,
+.kegiatan .row,
+.kontak .row {
+  display: flex;
+  justify-content: center;
+}
+
+.tentang .title,
+.pendidikan .title,
+.kegiatan .title,
+.kontak .title {
+  text-align: center;
+  color: #a87676;
+  padding: 2rem 0;
+}
+
+.tentang .content {
+  margin: 2rem;
+}
+
+.tentang .content p {
+  text-align: justify;
+}
+
+.pendidikan .col .card,
+.kegiatan .col .card {
+  width: 300px;
+  height: 370px;
+  background-color: #ffd0d0;
+  border-radius: 10px;
+  padding: 30px 30px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.pendidikan .col .card h3,
+.kegiatan .col .card h3 {
+  margin: 1rem 0;
+  color: #a87676;
+  font-style: bold;
+}
+
+.pendidikan .col .card p,
+.kegiatan .col .card p {
+  color: #a87676;
+}
+
+.pendidikan .col .card:hover,
+.kegiatan .col .card:hover {
+  background-color: #a87676;
+}
+
+.pendidikan .col .card:hover h3,
+.pendidikan .col .card:hover p,
+.kegiatan .col .card:hover h3,
+.kegiatan .col .card:hover p {
+  color: aliceblue;
+}
+
+.kontak .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #a87676;
+  color: aliceblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    background-color: #a87676;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .menu ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    float: right;
+    padding: 20px;
+  }
+}
